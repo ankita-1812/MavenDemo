@@ -1,0 +1,42 @@
+package com.lti.advdemo;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Arrays;
+import java.util.List;
+//import org.junit.Test; 
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+
+class Parameter {
+	
+	@ParameterizedTest
+	@ValueSource(ints= {2,8,6,4,24})
+	public void test_intArray(int arg) {
+		System.out.println("args:"+arg);
+		Assertions.assertTrue(arg%2==0);
+
+	}
+//	@Test
+//	public void checkForArray() {
+//		Integer intArr[]= {2,3,4,10};
+//		List<Integer> n=Arrays.asList(intArr);
+//		Assertions.assertAll(()->assertEquals(2,n.get(0)));
+//	}
+	
+//	@Test
+//    public void checkForarray()
+//    {
+//        Integer intArray[]= {2,3,7,10};
+//        List<Integer> numbers= Arrays.asList(intArray);
+//        
+//        Assertions.assertAll(
+//                ()->assertEquals(2,numbers.get(0)),
+//                ()->assertEquals(3,numbers.get(1)),
+//                ()->assertEquals(7,numbers.get(2))                
+//                );        
+//    }
+}
